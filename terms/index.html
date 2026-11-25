@@ -71,8 +71,23 @@
   a { color:var(--green); }
   footer { margin-top:64px; padding-top:20px; border-top:1px solid var(--border);
     color:var(--light); font-size:14px; }
+  .top { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px 24px; margin:0 0 36px; }
+  .top .logo { display:block; margin:0; width:170px; height:auto; }
+  .top nav { display:flex; flex-wrap:wrap; gap:6px 22px; }
+  .top nav a { color:var(--green); font-weight:650; font-size:16px; text-decoration:none; }
 </style>
 <div class="wrap">
+<header class="top">
+    <a href="/"><img class="logo" src="/images/sagito-logo.svg" width="991" height="395" alt="Sagito"></a>
+    <nav aria-label="Sagito">
+      <a href="/#how-it-works">How it works</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/resources">Free resources</a>
+      <a href="/faq">FAQ</a>
+      <a href="/blog">Blog</a>
+      <a href="/support">Help</a>
+    </nav>
+  </header>
 <h1>Sagito — Terms of Use</h1>
 <p class="updated">Last updated 19 September 2026</p>
 

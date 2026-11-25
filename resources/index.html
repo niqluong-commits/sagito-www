@@ -219,6 +219,24 @@ analytics.init({
     .items { gap:20px; justify-content:center; }
     .plans { grid-template-columns:1fr; }
   }
+
+  /* resources grid */
+  .rs-group { font-size:20px; margin:40px 0 14px; letter-spacing:-.01em; }
+  .rs-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin:0 0 8px; }
+  .rs-card { display:flex; gap:16px; background:#fff; border:1px solid var(--border); border-radius:14px; padding:14px; min-width:0; }
+  .rs-card:hover { border-color:var(--green); }
+  .rs-thumb { flex:none; width:112px; align-self:flex-start; }
+  .rs-thumb img { display:block; width:100%; height:auto; border-radius:6px; border:1px solid var(--border); box-shadow:0 3px 10px #14302a14; }
+  .rs-body { min-width:0; display:flex; flex-direction:column; }
+  .rs-body h3 { font-size:17px; line-height:1.3; margin:0 0 4px; }
+  .rs-body p { font-size:15px; line-height:1.5; margin:0 0 10px; color:var(--light); }
+  .rs-body .rs-note { font-size:12.5px; line-height:1.4; margin:0 0 10px; }
+  .rs-body a.rs-dl { margin-top:auto; align-self:flex-start; background:var(--green); color:#fff; font-weight:650; font-size:15px; padding:7px 14px; border-radius:999px; text-decoration:none; }
+  .rs-body a.rs-dl small { font-weight:500; opacity:.85; font-size:12.5px; }
+  .rs-body a.rs-dl:hover { opacity:.9; }
+  .rs-more { margin:18px 0 0; }
+  @media (max-width:700px) { .rs-grid { grid-template-columns:1fr; } .rs-thumb { width:96px; } }
+  /* end resources grid */
 </style>
 </head>
 <body>
@@ -236,67 +254,104 @@ analytics.init({
   </header>
   <h1>Free resources</h1>
   <p class="lede">Things to print, read and use at home, whether or not you ever download Sagito. No sign-up, no email address.</p>
-  <h2>Printable times tables</h2>
-  <p>Three A4 pages: the 12 &times; 12 times tables square, every table from 1 to 12 with the answers, and a blank practice sheet to fill in and check.</p>
-  <a class="block" href="/resources/sagito-times-tables.pdf" download>Download the times tables (PDF, A4, about 250 KB)</a>
-  <h2>Times tables: gaps and missing numbers</h2>
-  <p>Once the tables are familiar: a square with gaps to fill in, thirty-six missing-number questions such as 7 &times; ? = 56 that make you work backwards, and all the answers.</p>
-  <a class="block" href="/resources/sagito-multiplication-gaps.pdf" download>Download gaps and missing numbers (PDF, A4, about 250 KB)</a>
-  <h2>Division facts</h2>
-  <p>Division is the times tables backwards. Every table from 1 to 12 as division facts, sixty practice questions to fill in, and the answers.</p>
-  <a class="block" href="/resources/sagito-division-facts.pdf" download>Download division facts (PDF, A4)</a>
-  <h2>Maths practice paper and challenges</h2>
-  <p>A twenty-question mixed paper for Years 5 and 6, twelve puzzle cards to cut out for when the paper is finished, and a full mark scheme.</p>
-  <a class="block" href="/resources/sagito-maths-practice-paper-and-challenges.pdf" download>Download the maths paper and challenges (PDF, A4)</a>
-  <p>Need help with times tables and spelling? Go to <a href="https://www.sagitogo.app">Sagito Go</a>.</p>
-  <h2>KS2 spelling lists</h2>
-  <p>The statutory spelling lists for Years 3 and 4 and Years 5 and 6, with tick boxes and a look, say, cover, write, check practice sheet. Word lists from the national curriculum for England, &copy; Crown copyright, under the Open Government Licence.</p>
-  <a class="block" href="/resources/sagito-ks2-spelling-lists.pdf" download>Download the KS2 spelling lists (PDF, A4)</a>
-  <h2>KS2 spelling tracker</h2>
-  <p>One page for each list, with a row for every word and three tick boxes: practised, right a week later, right a month later. Fill it in as the words become secure.</p>
-  <a class="block" href="/resources/sagito-ks2-spelling-tracker.pdf" download>Download the spelling tracker (PDF, A4)</a>
-  <h2>Spelling word searches</h2>
-  <p>Four 15 &times; 15 puzzles built from the spelling lists: double letters and long words for Years 3 and 4, double letters and word endings for Years 5 and 6. The Years 5 and 6 puzzles have some words running backwards. Answers included.</p>
-  <a class="block" href="/resources/sagito-spelling-word-searches.pdf" download>Download the word searches (PDF, A4)</a>
-  <h2>Spot the mistake</h2>
-  <p>Two sheets of twelve sentences, each with one spelling mistake to circle and correct, for Years 3 and 4 and Years 5 and 6, with an answer page.</p>
-  <a class="block" href="/resources/sagito-spot-the-mistake.pdf" download>Download spot the mistake (PDF, A4)</a>
-  <h2>Grammar glossary and proofreading</h2>
-  <p>A plain-English glossary of twenty-four grammar terms children meet in Years 3 to 6, with examples, then two short passages with seven mistakes each to find and correct, and answers.</p>
-  <a class="block" href="/resources/sagito-grammar-glossary-and-proofreading.pdf" download>Download the glossary and proofreading (PDF, A4)</a>
-  <h2>An 11+ reading list</h2>
-  <p>About forty stories, classics and real-life books chosen for rich language, with a line on why each is worth reading and a tick box for each one finished.</p>
-  <a class="block" href="/resources/sagito-11-plus-reading-list.pdf" download>Download the reading list (PDF, A4)</a>
-  <h2>Reading log and challenge</h2>
-  <p>A log for every book finished, with a place to note new words, and a twenty-prompt reading challenge for reading widely.</p>
-  <a class="block" href="/resources/sagito-reading-log-and-challenge.pdf" download>Download the reading log and challenge (PDF, A4)</a>
-  <h2>Key words for KS2 and KS3</h2>
-  <p>Ninety-six words that turn up in every subject from Year 5 to Year 8 and in 11+ comprehension, each with a plain meaning and an example sentence.</p>
-  <a class="block" href="/resources/sagito-ks3-vocabulary.pdf" download>Download the KS2 and KS3 word list (PDF, A4)</a>
-  <h2>A word a day</h2>
-  <p>One ambitious word for every school day of the year, 195 in all, each with how to say it, a plain meaning, an example sentence and the ordinary word it replaces. The words get harder through the year, and the last page is a notebook to fill in. They are the same words children meet in the Word of the Day card in the Sagito apps.</p>
-  <a class="block" href="/resources/sagito-word-a-day.pdf" download>Download A word a day (PDF, A4)</a>
-  <h2>11+ vocabulary</h2>
-  <p>192 words for 11+ comprehension and verbal reasoning, in alphabetical order. Each has its part of speech, a plain meaning and an example sentence, with a tick box for when you can use it yourself.</p>
-  <a class="block" href="/resources/sagito-11-plus-vocabulary.pdf" download>Download 11+ vocabulary (PDF, A4)</a>
-  <h2>Vocabulary card game</h2>
-  <p>Twenty-four 11+ words and their meanings to cut out and play with: pairs, match-up and snap.</p>
-  <a class="block" href="/resources/sagito-vocabulary-card-game.pdf" download>Download the card game (PDF, A4)</a>
-  <h2>11+ verbal reasoning starter pack</h2>
-  <p>Forty practice questions in the usual formats: same meaning, odd one out, missing word and complete the word, with answers. A gentle way to meet each question type.</p>
-  <a class="block" href="/resources/sagito-11-plus-verbal-reasoning-starter-pack.pdf" download>Download the starter pack (PDF, A4)</a>
-  <h2>Synonyms and antonyms</h2>
-  <p>Sixty pairs of words that mean the same and sixty pairs of opposites for the 11+ vocabulary questions, with a match-up game and answers.</p>
-  <a class="block" href="/resources/sagito-synonyms-and-antonyms.pdf" download>Download synonyms and antonyms (PDF, A4)</a>
-  <h2>Mystery activities</h2>
-  <p>Three short mysteries that use maths and words to solve: a missing cupcake, a missing key and a lunchbox thief. Each has one answer, and the answers are included.</p>
-  <a class="block" href="/resources/sagito-mystery-activities.pdf" download>Download the mysteries (PDF, A4)</a>
-  <h2>A parent&rsquo;s guide to the 11+</h2>
-  <p>A short, honest overview of what the 11+ is, what is usually tested and what helps, with questions to ask schools and a twelve-point &ldquo;how ready are we?&rdquo; checklist.</p>
-  <a class="block" href="/resources/sagito-11-plus-parent-guide.pdf" download>Download the parent guide and checklist (PDF, A4)</a>
-  <h2>Guides for parents</h2>
-  <p>Plain-English guides to the 11+ and the Kent Test: what is on the papers, how to mark the answer sheet, and a calm checklist for test day.</p>
-  <a class="block" href="https://www.sagito.app/blog">Read the guides</a>
+  <!-- resources:start -->
+  <h2 class="rs-group">Maths</h2>
+  <div class="rs-grid">
+    <article class="rs-card">
+      <a class="rs-thumb" href="/resources/sagito-times-tables.pdf" download tabindex="-1" aria-hidden="true"><img src="/resources/thumbs/sagito-times-tables.jpg" width="300" height="424" alt="" loading="lazy"></a>
+      <div class="rs-body"><h3>Printable times tables</h3><p>The 12 &times; 12 square, every table from 1 to 12 with the answers, and a blank practice sheet.</p><a class="rs-dl" href="/resources/sagito-times-tables.pdf" download>Download PDF <small>&middot; 3 pages</small></a></div>
+    </article>
+    <article class="rs-card">
+      <a class="rs-thumb" href="/resources/sagito-multiplication-gaps.pdf" download tabindex="-1" aria-hidden="true"><img src="/resources/thumbs/sagito-multiplication-gaps.jpg" width="300" height="424" alt="" loading="lazy"></a>
+      <div class="rs-body"><h3>Times tables: gaps and missing numbers</h3><p>A square with gaps to fill in, 36 missing-number questions such as 7 &times; ? = 56, and the answers.</p><a class="rs-dl" href="/resources/sagito-multiplication-gaps.pdf" download>Download PDF <small>&middot; 3 pages</small></a></div>
+    </article>
+    <article class="rs-card">
+      <a class="rs-thumb" href="/resources/sagito-division-facts.pdf" download tabindex="-1" aria-hidden="true"><img src="/resources/thumbs/sagito-division-facts.jpg" width="300" height="424" alt="" loading="lazy"></a>
+      <div class="rs-body"><h3>Division facts</h3><p>The tables in reverse: every division fact from 1 to 12, 60 practice questions and the answers.</p><a class="rs-dl" href="/resources/sagito-division-facts.pdf" download>Download PDF <small>&middot; 3 pages</small></a></div>
+    </article>
+    <article class="rs-card">
+      <a class="rs-thumb" href="/resources/sagito-maths-practice-paper-and-challenges.pdf" download tabindex="-1" aria-hidden="true"><img src="/resources/thumbs/sagito-maths-practice-paper-and-challenges.jpg" width="300" height="424" alt="" loading="lazy"></a>
+      <div class="rs-body"><h3>Maths practice paper and challenges</h3><p>A 20-question mixed paper for Years 5 and 6, 12 puzzle cards and a full mark scheme.</p><a class="rs-dl" href="/resources/sagito-maths-practice-paper-and-challenges.pdf" download>Download PDF <small>&middot; 4 pages</small></a></div>
+    </article>
+  </div>
+  <p class="rs-more">Need help with times tables and spelling? Go to <a href="https://www.sagitogo.app">Sagito Go</a>.</p>
+  <h2 class="rs-group">Spelling and grammar</h2>
+  <div class="rs-grid">
+    <article class="rs-card">
+      <a class="rs-thumb" href="/resources/sagito-ks2-spelling-lists.pdf" download tabindex="-1" aria-hidden="true"><img src="/resources/thumbs/sagito-ks2-spelling-lists.jpg" width="300" height="424" alt="" loading="lazy"></a>
+      <div class="rs-body"><h3>KS2 spelling lists</h3><p>The statutory lists for Years 3 and 4 and Years 5 and 6, with tick boxes and a look, say, cover, write, check sheet.</p><p class="rs-note">Word lists from the national curriculum for England, &copy; Crown copyright, under the Open Government Licence.</p><a class="rs-dl" href="/resources/sagito-ks2-spelling-lists.pdf" download>Download PDF <small>&middot; 3 pages</small></a></div>
+    </article>
+    <article class="rs-card">
+      <a class="rs-thumb" href="/resources/sagito-ks2-spelling-tracker.pdf" download tabindex="-1" aria-hidden="true"><img src="/resources/thumbs/sagito-ks2-spelling-tracker.jpg" width="300" height="424" alt="" loading="lazy"></a>
+      <div class="rs-body"><h3>KS2 spelling tracker</h3><p>A row for every word with three tick boxes: practised, right a week later, right a month later.</p><a class="rs-dl" href="/resources/sagito-ks2-spelling-tracker.pdf" download>Download PDF <small>&middot; 2 pages</small></a></div>
+    </article>
+    <article class="rs-card">
+      <a class="rs-thumb" href="/resources/sagito-spot-the-mistake.pdf" download tabindex="-1" aria-hidden="true"><img src="/resources/thumbs/sagito-spot-the-mistake.jpg" width="300" height="424" alt="" loading="lazy"></a>
+      <div class="rs-body"><h3>Spot the mistake</h3><p>Twenty-four sentences, each with one spelling mistake to circle and correct, with answers.</p><a class="rs-dl" href="/resources/sagito-spot-the-mistake.pdf" download>Download PDF <small>&middot; 3 pages</small></a></div>
+    </article>
+    <article class="rs-card">
+      <a class="rs-thumb" href="/resources/sagito-grammar-glossary-and-proofreading.pdf" download tabindex="-1" aria-hidden="true"><img src="/resources/thumbs/sagito-grammar-glossary-and-proofreading.jpg" width="300" height="424" alt="" loading="lazy"></a>
+      <div class="rs-body"><h3>Grammar glossary and proofreading</h3><p>Twenty-four grammar terms in plain English, then two passages with seven mistakes each to find.</p><a class="rs-dl" href="/resources/sagito-grammar-glossary-and-proofreading.pdf" download>Download PDF <small>&middot; 5 pages</small></a></div>
+    </article>
+  </div>
+  <h2 class="rs-group">Vocabulary and reading</h2>
+  <div class="rs-grid">
+    <article class="rs-card">
+      <a class="rs-thumb" href="/resources/sagito-11-plus-reading-list.pdf" download tabindex="-1" aria-hidden="true"><img src="/resources/thumbs/sagito-11-plus-reading-list.jpg" width="300" height="424" alt="" loading="lazy"></a>
+      <div class="rs-body"><h3>An 11+ reading list</h3><p>About forty stories, classics and real-life books chosen for rich language, with a tick box for each.</p><a class="rs-dl" href="/resources/sagito-11-plus-reading-list.pdf" download>Download PDF <small>&middot; 3 pages</small></a></div>
+    </article>
+    <article class="rs-card">
+      <a class="rs-thumb" href="/resources/sagito-reading-log-and-challenge.pdf" download tabindex="-1" aria-hidden="true"><img src="/resources/thumbs/sagito-reading-log-and-challenge.jpg" width="300" height="424" alt="" loading="lazy"></a>
+      <div class="rs-body"><h3>Reading log and challenge</h3><p>A log for every book finished, with a place for new words, and a 20-prompt reading challenge.</p><a class="rs-dl" href="/resources/sagito-reading-log-and-challenge.pdf" download>Download PDF <small>&middot; 2 pages</small></a></div>
+    </article>
+    <article class="rs-card">
+      <a class="rs-thumb" href="/resources/sagito-ks3-vocabulary.pdf" download tabindex="-1" aria-hidden="true"><img src="/resources/thumbs/sagito-ks3-vocabulary.jpg" width="300" height="424" alt="" loading="lazy"></a>
+      <div class="rs-body"><h3>Key words for KS2 and KS3</h3><p>Ninety-six words that turn up in every subject from Year 5 to Year 8, each with a meaning and a sentence.</p><a class="rs-dl" href="/resources/sagito-ks3-vocabulary.pdf" download>Download PDF <small>&middot; 4 pages</small></a></div>
+    </article>
+    <article class="rs-card">
+      <a class="rs-thumb" href="/resources/sagito-word-a-day.pdf" download tabindex="-1" aria-hidden="true"><img src="/resources/thumbs/sagito-word-a-day.jpg" width="300" height="424" alt="" loading="lazy"></a>
+      <div class="rs-body"><h3>A word a day</h3><p>One ambitious word for every school day, 195 in all, getting harder through the year, plus a notebook page.</p><a class="rs-dl" href="/resources/sagito-word-a-day.pdf" download>Download PDF <small>&middot; 14 pages</small></a></div>
+    </article>
+    <article class="rs-card">
+      <a class="rs-thumb" href="/resources/sagito-11-plus-vocabulary.pdf" download tabindex="-1" aria-hidden="true"><img src="/resources/thumbs/sagito-11-plus-vocabulary.jpg" width="300" height="424" alt="" loading="lazy"></a>
+      <div class="rs-body"><h3>11+ vocabulary</h3><p>192 words for comprehension and verbal reasoning, each with a meaning and an example sentence.</p><a class="rs-dl" href="/resources/sagito-11-plus-vocabulary.pdf" download>Download PDF <small>&middot; 8 pages</small></a></div>
+    </article>
+    <article class="rs-card">
+      <a class="rs-thumb" href="/resources/sagito-synonyms-and-antonyms.pdf" download tabindex="-1" aria-hidden="true"><img src="/resources/thumbs/sagito-synonyms-and-antonyms.jpg" width="300" height="424" alt="" loading="lazy"></a>
+      <div class="rs-body"><h3>Synonyms and antonyms</h3><p>Sixty pairs that mean the same and sixty opposites, with a match-up game and answers.</p><a class="rs-dl" href="/resources/sagito-synonyms-and-antonyms.pdf" download>Download PDF <small>&middot; 4 pages</small></a></div>
+    </article>
+  </div>
+  <h2 class="rs-group">Puzzles and games</h2>
+  <div class="rs-grid">
+    <article class="rs-card">
+      <a class="rs-thumb" href="/resources/sagito-spelling-word-searches.pdf" download tabindex="-1" aria-hidden="true"><img src="/resources/thumbs/sagito-spelling-word-searches.jpg" width="300" height="424" alt="" loading="lazy"></a>
+      <div class="rs-body"><h3>Spelling word searches</h3><p>Four puzzles built from the spelling lists, some with words running backwards, with answers.</p><a class="rs-dl" href="/resources/sagito-spelling-word-searches.pdf" download>Download PDF <small>&middot; 5 pages</small></a></div>
+    </article>
+    <article class="rs-card">
+      <a class="rs-thumb" href="/resources/sagito-vocabulary-card-game.pdf" download tabindex="-1" aria-hidden="true"><img src="/resources/thumbs/sagito-vocabulary-card-game.jpg" width="300" height="424" alt="" loading="lazy"></a>
+      <div class="rs-body"><h3>Vocabulary card game</h3><p>Twenty-four 11+ words and meanings to cut out and play: pairs, match-up and snap.</p><a class="rs-dl" href="/resources/sagito-vocabulary-card-game.pdf" download>Download PDF <small>&middot; 3 pages</small></a></div>
+    </article>
+    <article class="rs-card">
+      <a class="rs-thumb" href="/resources/sagito-mystery-activities.pdf" download tabindex="-1" aria-hidden="true"><img src="/resources/thumbs/sagito-mystery-activities.jpg" width="300" height="424" alt="" loading="lazy"></a>
+      <div class="rs-body"><h3>Mystery activities</h3><p>Three short mysteries solved with maths and words: a cupcake, a key and a lunchbox thief.</p><a class="rs-dl" href="/resources/sagito-mystery-activities.pdf" download>Download PDF <small>&middot; 4 pages</small></a></div>
+    </article>
+  </div>
+  <h2 class="rs-group">11+ and for parents</h2>
+  <div class="rs-grid">
+    <article class="rs-card">
+      <a class="rs-thumb" href="/resources/sagito-11-plus-verbal-reasoning-starter-pack.pdf" download tabindex="-1" aria-hidden="true"><img src="/resources/thumbs/sagito-11-plus-verbal-reasoning-starter-pack.jpg" width="300" height="424" alt="" loading="lazy"></a>
+      <div class="rs-body"><h3>11+ verbal reasoning starter pack</h3><p>Forty practice questions in the usual formats, with answers: a gentle way to meet each type.</p><a class="rs-dl" href="/resources/sagito-11-plus-verbal-reasoning-starter-pack.pdf" download>Download PDF <small>&middot; 5 pages</small></a></div>
+    </article>
+    <article class="rs-card">
+      <a class="rs-thumb" href="/resources/sagito-11-plus-parent-guide.pdf" download tabindex="-1" aria-hidden="true"><img src="/resources/thumbs/sagito-11-plus-parent-guide.jpg" width="300" height="424" alt="" loading="lazy"></a>
+      <div class="rs-body"><h3>A parent&rsquo;s guide to the 11+</h3><p>What the 11+ is, what is usually tested and what helps, with questions for schools and a checklist.</p><a class="rs-dl" href="/resources/sagito-11-plus-parent-guide.pdf" download>Download PDF <small>&middot; 3 pages</small></a></div>
+    </article>
+    <article class="rs-card">
+      <a class="rs-thumb" href="https://www.sagito.app/blog" tabindex="-1" aria-hidden="true"><img src="/resources/thumbs/blog-guides.jpg" width="300" height="424" alt="" loading="lazy"></a>
+      <div class="rs-body"><h3>Guides for parents</h3><p>Plain-English guides to the 11+ and the Kent Test: the papers, the answer sheet and test day.</p><a class="rs-dl" href="https://www.sagito.app/blog">Read the guides</a></div>
+    </article>
+  </div>
+  <!-- resources:end -->
   <h2>Practise with Sagito</h2>
   <p>The free version is the real app, with 2,000 questions free permanently and no daily cap.</p>
 
